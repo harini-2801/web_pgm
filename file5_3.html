@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation with Pause</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .square {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      animation: movePause 10s infinite;
+    }
+
+    @keyframes movePause {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(200px);
+        animation-play-state: paused;
+      }
+      100% {
+        transform: translateX(0);
+        animation-play-state: running;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="square"></div>
+</body>
+</html>
